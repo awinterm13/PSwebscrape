@@ -30,7 +30,7 @@ foreach($img in $images){
         #else {
         #    $source = "http:" + $img.src |out-string
         #    $webClient.DownloadFile($source, $destination)
-        #    $i++
+        #    $i++d 
         #}
     }
 }
