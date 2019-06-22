@@ -26,7 +26,7 @@ Downloaded PS core for system and Raspi (which needed a forever long upgrade.)
         $ powershell
 
 Wrote out Wedscrape.ps1  ( spelling error ) Its a nice framework to start with however it doesnt function. 
-Wrote ScrapeBirdImgsOffBing It works. Actually a few tweaks and this is URL agnostic and can download an infinate about of imgs.
+Wrote ScrapeBirdImgsOffBing It works. Actually a few tweaks and this is URL agnostic and can download an infinate amount of imgs.
 
 
 
