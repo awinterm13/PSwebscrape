@@ -9,9 +9,9 @@ function getFileStamp($fileName)
 function Main()
 {
 Write-Host "Logging into site"
-$r = Invoke-WebRequest https://bing.com -SessionVariable foo
-$r.Forms[0].fields["user"] = "username"
-r.Forms[0].fields["password"] = "password"
+$r = Invoke-WebRequest https://bing.com -SessionVariable foo -Method Get
+$r.Forms.fields["user"] = "username"
+$r.Forms.fields["password"] = "password"
 $result = Invoke-WebRequest https://bing.com -WebSession $foo -Body $r -Method Post
 if($result.StatusCode -ne "200")
 {

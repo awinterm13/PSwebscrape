@@ -26,6 +26,11 @@ foreach($img in $images){
     if($source.StartsWith("http")) {
         $webClient.DownloadFile($source, $destination)
         $i++
-        }
+        } 
+        #else {
+        #    $source = "http:" + $img.src |out-string
+        #    $webClient.DownloadFile($source, $destination)
+        #    $i++
+        #}
     }
 }
