@@ -1,0 +1,37 @@
+The Goal is to understand Web Scraping and Certificate logins enough to convince team to upgrage PS so I can automate Company XYZ File Downloads.
+
+Day one: 
+
+Downloaded VScode
+Downloaded PS core for system and Raspi (which needed a forever long upgrade.)
+
+    Raspi 
+        $ sudo apt-get update
+        $ sudo apt-get upgrade
+        $ sudo apt-get dist-upgrade
+        $ sudo sed -i 's/jessie/stretch/g' /etc/apt/sources.list    
+        $ sudo sed -i 's/jessie/stretch/g' /etc/apt/sources.list.d/raspi.list 
+        $ sudo apt-get update && sudo apt-get upgrade -y
+        $ sudo apt-get dist-upgrade -y
+        $ sudo rpi-update 
+
+    Reboot
+
+        $ sudo apt-get install libunwind8
+        $ wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.2/powershell-6.0.2-linux-arm32.tar.gz
+        $ mkdir ~/powershell
+        $ tar -xvf ./powershell-6.0.2-linux-arm32.tar.gz -C ~/powershell
+        $ sudo ln -s ~/powershell/pwsh /usr/bin/pwsh
+        $ sudo ln -s ~/powershell/pwsh /usr/local/bin/powershell
+        $ powershell
+
+Wrote out Wedscrape.ps1  ( spelling error ) Its a nice framework to start with however it doesnt function. 
+Wrote ScrapeBirdImgsOffBing It works. Actually a few tweaks and this is URL agnostic and can download an infinate about of imgs.
+
+
+
+
+
+
+
+
