@@ -29,6 +29,41 @@ Wrote out Wedscrape.ps1  ( spelling error ) Its a nice framework to start with h
 Wrote ScrapeBirdImgsOffBing It works. Actually a few tweaks and this is URL agnostic and can download an infinate amount of imgs.
 
 
+Day 2
+
+    Created a SimpleEimail.ps1 - its not the most current method for sending an email.  Need to look into Mailkits.  But Had some fun with it. 
+    Made a Daily Bird Picture email and am running it on the pi
+    Made a Alex Boi Program in the same manner with inspirational quotes to keep him grinding. 
+
+PSWebscrape
+
+    Need to find a site that kinda matches the javascript call links and figure out how to DL them.  
+        Possible that I might need to look at the COM object but will try invoke-Webrequest first 
+
+    PfxCertificate login.  This looks super hopefull. 
+
+        $pfxcert = Get-PfxCertificate -FilePath C:\Users\PowershellNoob\Documents\EP2.pfx
+        Invoke-WebRequest -Uri $source -Certificate $pfxcert -OutFile $destination -MaximumRedirection 3 -Verbose;
+
+
+Basicailly
+
+        Get Cert from folder of certs
+        Use cert to login  -store session var  
+        use session var find files I need and DL them  
+        Delete Session var
+
+        Do file stuff on our system easy peasey
+
+        No way to test this at home. So I think, come like... as close as you can. 
+        take some code you'd like to test then ask Dave\Shannon if you can give it a try
+
+        Run from Term server? Meh....  I wonder if PS 3.0 can do this.
+        Maybe I can advocate for PS core. 
+
+
+
+
 
 
 
