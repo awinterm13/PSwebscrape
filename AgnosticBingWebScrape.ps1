@@ -10,13 +10,24 @@ $b = 1
 $Find = "https://www.bing.com/images/search?q=" + $searchTerm + "&FORM=HDRSC2" | Out-String
 ImageScraper $Find $b
 Invoke-Item  "C:\STest"
-#start-sleep -s 5
 $b = 29
-$Findmore = "https://www.bing.com/images/search?q=" + $searchTerm + "+More&FORM=HDRSC2" | Out-String
+$Findmore = "https://www.bing.com/images/search?q=" + $searchTerm + "+arctic&FORM=HDRSC2" | Out-String
 ImageScraper $Findmore $b
 Invoke-Item  "C:\STest"
 $b = 57
-$Findmore = "https://www.bing.com/images/search?q=" + $searchTerm + "+More+and&FORM=HDRSC2" | Out-String
+$Findmore = "https://www.bing.com/images/search?q=" + $searchTerm + "+More+colorful&FORM=HDRSC2" | Out-String
+ImageScraper $Findmore $b
+Invoke-Item  "C:\STest"
+$b = 85
+$Findmore = "https://www.bing.com/images/search?q=" + $searchTerm + "+More+tropical&FORM=HDRSC2" | Out-String
+ImageScraper $Findmore $b
+Invoke-Item  "C:\STest"
+$b = 109
+$Findmore = "https://www.bing.com/images/search?q=" + $searchTerm + "+More+hawk&FORM=HDRSC2" | Out-String
+ImageScraper $Findmore $b
+Invoke-Item  "C:\STest"
+$b = 137
+$Findmore = "https://www.bing.com/images/search?q=" + $searchTerm + "+pretty+owl&FORM=HDRSC2" | Out-String
 ImageScraper $Findmore $b
 Invoke-Item  "C:\STest"
 }
@@ -32,7 +43,6 @@ function ImageScraper($website, $b) {
         exit
     }
     $images = ($iwl).Images | Select-Object src   
-    $string = $images -join "`n"
     Write-Host $images
     Write-host ""
     Write-host $images.Count " Images found." -ForegroundColor Green
@@ -48,8 +58,8 @@ function ImageScraper($website, $b) {
         $source = $img.src
         $A++
         $A
-        $term = $searchTerm
-        $destination = "C:\STest\" + $term + "-" + $i + ".jpg"
+        #$destination = "C:\STest\" + $term + "-" + $i + ".jpg"
+        $destination = "C:\STest\Bird-" + $i +".jpg"
         $destination
         $source
          
@@ -60,7 +70,7 @@ function ImageScraper($website, $b) {
         }
     }
     
-searchBingImages "cats"
+searchBingImages "pretty+Bird"
 
 
  
