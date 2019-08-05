@@ -20,11 +20,11 @@ $Subject = $subjects[$subnumber]
 $Body = "WORDS GO HERE"
 $SMTPServer = "smtp.gmail.com"
 $SMTPPort = "587"
-
+ 
 $User = "SOMEUSER"
 $PWord = ConvertTo-SecureString -String "SOMEPASSWORD" -AsPlainText -Force
 $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User, $PWord
 
 Send-MailMessage -From $From -To $To -CC  $CC -Bcc $BCC -Subject $Subject -Body $Body -SMtpServer $SMTPServer -Port $SMTPPort -UseSsl -Credential $Credential -Attachments $Attachment
- 
+  
 }

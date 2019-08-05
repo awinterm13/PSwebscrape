@@ -13,7 +13,7 @@ Write-Host $images
 Write-host ""
 Write-host " I CAUGHT " $images.Count " BIRDS!!!" -ForegroundColor Green
 $webClient = New-Object System.Net.WebClient
-
+ 
 foreach($img in $images){
     Write-Host $img.src
     #$URL2 = $img.src

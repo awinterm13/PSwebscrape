@@ -4,7 +4,7 @@ $form = @{
     LoginForm_password = $password
     LoginForm_username = $username
 }
-$result = Invoke-WebRequest 'https://www.podbean.com/login' -SessionVariable foo -Form $form -Method POST
+$result = Invoke-WebRequest -Uri 'https://www.podbean.com/login' -SessionVariable foo -Form $form -Method POST
 $foo
 
 $result | Get-Member | Format-table

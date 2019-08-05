@@ -5,7 +5,7 @@
 
 
 function searchBingImages($searchTerm)
-{
+{ 
 $b = 1
 $Find = "https://www.bing.com/images/search?q=" + $searchTerm + "&FORM=HDRSC2" | Out-String
 ImageScraper $Find $b
@@ -66,10 +66,10 @@ function ImageScraper($website, $b) {
         if($source.StartsWith("http")) {
             $webClient.DownloadFile($source, $destination)
             $i++
-            }
+            } 
         }
     }
-    
+     
 searchBingImages "pretty+Bird"
 
 
